@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f2ccff;
+}
+
+header {
+    background-color: #9467BD;
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: none;
+    text-align: center;
+    position: sticky;
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+}
+
+
+#divnav{
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    border-top: none;
+    border: 0.1px solid black;
+}
+
+.images {
+    width: 270px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.aheader {
+    text-align: center;
+    font-size: 20px;
+    text-decoration: inherit;
+    color: #DEDCD7;
+    text-align: center;
+    margin: 30px;
+}
+
+a:hover{
+    color: #9467BD;
+}
+
+h2 {
+    padding: 10px;
+    color: #9467BD;
+    font-size: 30px;
+}
+
+.head img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #555;
+  }
+  
+.head h1 {
+    position: relative;
+    padding: 20px;
+    top: 18px;
+    left: -30px;
+}
+
+.inputtext {
+    font-size: 15px;
+    width: 40%;
+    margin: 8px 0 20px;
+    border-radius: 5px;
+    border: 0.2px solid #B1B1B2;
+    padding: 10px;
+}
+
+.inputtext:focus {
+    border: 0.1px solid #9467BD;
+    box-shadow: 0px 0px 5px #9467BD;
+    outline: none;
+}

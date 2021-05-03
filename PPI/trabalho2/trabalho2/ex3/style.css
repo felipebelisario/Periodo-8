@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: none;
+    text-align: center;
+    position: sticky;
+}
+
+nav {
+    padding: 15px;
+}
+
+div {
+    padding: 20px;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    border-top: none;
+    border: 0.1px solid black;
+}
+
+.images {
+    width: 270px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: inherit;
+    color: #DEDCD7;
+    text-align: center;
+    margin: 30px;
+}
+
+h2 {
+    padding: 10px;
+    color: grey;
+    font-size: 30px;
+}

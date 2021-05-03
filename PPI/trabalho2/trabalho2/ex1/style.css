@@ -1,0 +1,31 @@
+header {
+    text-align: center;
+    background-color: #555555;
+    color: #D8D8D8;
+    padding: 2px;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-size: cover;
+    background-image: url("images/background.jpg");
+    margin: 0;
+}
+
+main {
+    background-color: #EEEEEE;
+    border: 0.5px solid #B1B1B2;
+    border-top: none;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% 4%;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 20px;
+}

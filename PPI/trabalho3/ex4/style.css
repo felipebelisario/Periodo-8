@@ -1,0 +1,50 @@
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+
+.loginBox {
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+    border-radius: 10px;
+    border: 0.1px solid #B1B1B2;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+}
+
+input {
+    font-size: 15px;
+    width: 90%;
+    margin: 8px 0 5px;
+    border-radius: 5px;
+    border: 0.2px solid #B1B1B2;
+    padding: 8px;
+    display: block;
+}
+
+input:focus {
+    border: 0.1px solid #9467BD;
+    box-shadow: 0px 0px 5px #9467BD;
+    outline: none;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+span {
+    color: purple;
+    font-weight: bold;
+}

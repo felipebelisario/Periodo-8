@@ -1,0 +1,81 @@
+body {
+    margin: 0px;
+    background-color: #eeeeee;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 0;
+    height: 60px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+nav {
+    background-color: white;
+    border: 0.2px solid black;
+    padding: 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+h2 {
+    color: darkblue;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 10px;
+    border: 0.1px thin black;
+    box-shadow: 1px 1px black;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+nav button {
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    background-color: inherit;
+    height: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+nav button:hover {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+button.buttonActive {
+    font-weight: bold;
+    color: blue;
+}
+
+.tabs section {
+    display: none;
+}
+
+section.tabActive {
+    display: block;
+}
