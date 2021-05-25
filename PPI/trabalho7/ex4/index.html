@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Exercicio 4</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <div class="col-sm">
+            <label for="especialidade" class="form-label">Especialidade</label>
+            <select name="especialidade" class="form-select" id="especialidade">
+              <option value="dermatologia">dermatologia</option>
+              <option value="oftalmologia">oftalmologia</option>
+              <option value="cardiologia">cardiologia</option>
+            </select>
+        </div>
+
+        <div class="col-sm">
+            <label for="medicos" class="form-label">Medicos</label>
+            <select name="medicos" class="form-select" id="medicos">
+            </select>
+        </div>
+
+        </br>
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+
+    <script>
+
+        const especialidades = document.querySelector("#especialidade");
+        especialidades.addEventListener('change', buscaMedicos);
+        
+        function buscaMedicos() {
+            console.log(especialidades.value);
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "busca_medicos.php?especialidade=" + especialidades.value);
+
+            xhr.onload = function() {
+                if (xhr.status != 200) {
+                    console.error("Falha inesperada: " + xhr.responseText);
+                    return;
+                }
+                
+                // converte a string JSON para objeto JavaScript
+                try {
+                    var medicos = JSON.parse(xhr.responseText);
+                }
+                catch (e) {
+                    console.error("String JSON inválida: " + xhr.responseText);
+                    return;
+                }
+
+                addmedicos(medicos);
+
+            }
+            xhr.onerror = function () {
+                console.error("Erro de rede - requisição não finalizada");
+            };
+           
+            xhr.send();
+
+        }
+
+        function addmedicos(response) {
+            var campoSelect = document.getElementById("medicos");
+
+            for (i = campoSelect.length - 1; i >= 0; i--) {
+                campoSelect.remove(i);
+            }
+
+            for (i=0; i<response.length; i++) {
+            
+                medico = response[i];
+
+                var option = document.createElement("option");
+                option.text = medico.nome;
+                option.value = medico.nome + " - " + medico.telefone;
+                campoSelect.add(option);
+
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
